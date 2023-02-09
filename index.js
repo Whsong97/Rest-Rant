@@ -1,5 +1,5 @@
 require('dotenv').config()
-const require = ('express')
+const express = require('express')
 
 const app = express()
 
