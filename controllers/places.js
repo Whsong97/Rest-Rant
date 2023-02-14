@@ -1,24 +1,23 @@
 const router = require('express').Router()
+const places = require('../models/places')
 
 router.post('/', (req, res) => {
-    console.log(req.body)
-    res.send('POST /places')
+    if (!req.body.pic) {
+        // Default image if one is not provided
+        req.body.pic = 'https://j4y2v5w8.stackpathcdn.com/wp-content/uploads/2017/03/Generic-vs.-Brand-Name.jpg'
+    }
+    if (!req.body.city) {
+        req.body.city = 'Anytown'
+    }
+    if (!req.body.state) {
+        req.body.state = 'USA'
+    }
+    places.push(req.body)
+    res.redirect('/places')
 })
 
 router.get('/', function(req, res){
-    let places = [{
-        name: 'H-Thai-ML',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
-        pic: '/image/green-curry.png'
-    }, {
-        name: 'Coding Cat Cafe',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
-        pic: '/image/cat-cafe-coffee.jpg'
-    }]
+   
     router.get('/new', function(req, res){
         res.render('places/new')
     })
