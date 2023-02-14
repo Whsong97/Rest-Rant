@@ -1,5 +1,10 @@
 const router = require('express').Router()
 
+router.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('POST /places')
+})
+
 router.get('/', function(req, res){
     let places = [{
         name: 'H-Thai-ML',
@@ -17,6 +22,7 @@ router.get('/', function(req, res){
     router.get('/new', function(req, res){
         res.render('places/new')
     })
+ 
     res.render('places/index', { places })
 })
 
