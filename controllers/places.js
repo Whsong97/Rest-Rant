@@ -14,7 +14,7 @@ router.get('/', function(req, res){
         cuisines: 'Coffee, Bakery',
         pic: '/image/cat-cafe-coffee.jpg'
     }]
-    res.get('/new', function(req, res){
+    router.get('/new', function(req, res){
         res.render('places/new')
     })
     res.render('places/index', { places })
