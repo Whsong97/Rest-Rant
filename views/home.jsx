@@ -12,9 +12,6 @@ function home () {
                 <div>
                     Photo by <a href="https://unsplash.com/@charlesdeluvio">Charles Deluvio</a> on <a href="https://unsplash.com/photos/wr8Ze_O-sjI"> Unsplash</a>
                 </div>
-                <a href="/places">
-                    <button className="btn-primary">Places Page</button>
-                </a>
             </main>
         </Def>
     )

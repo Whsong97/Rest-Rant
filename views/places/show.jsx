@@ -9,6 +9,7 @@ function show (data) {
                 <h2>Currently Unrated</h2>
                 <h2>Description</h2>
                 <h3>Comments</h3>
+            </main>
                 <a href={`/places/${data.id}/edit`} className='btn btn-warning'>
                     Edit
                 </a>
@@ -17,7 +18,6 @@ function show (data) {
                         Delete
                     </button>
                 </form>
-            </main>
         </Def>
     )
 }
