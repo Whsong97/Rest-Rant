@@ -44,3 +44,10 @@ main {
     background-color: white;
 }
 
+form {
+    display: inline;
+}
+
+.border {
+    border: 1px solid gray;
+}
